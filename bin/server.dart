@@ -46,9 +46,9 @@ Future<Response> _detailsHander(Request request) async {
 
   final response = await client.get(
     Uri.https('maps.googleapis.com', '/maps/api/place/details/json', {
-      'place_id': params['input'],
+      'place_id': params['place_id'],
       'key': params['key'],
-      'sessiontoken': params['sessionToken']
+      'sessiontoken': params['sessiontoken']
     }),
   );
 
@@ -69,7 +69,7 @@ Future<Response> _placesHandler(Request request) async {
       'input': params['input'],
       'types': params['types'],
       'key': params['key'],
-      'sessiontoken': params['sessionToken']
+      'sessiontoken': params['sessiontoken']
     }),
   );
 
